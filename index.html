@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> pc형을 모바일에 축소 시켰을 때 1:1비율로 보일 수 있게 함. 기본형으로만 제작 했을 땐 지워줘야 레이아웃이 꺠지지 않음 -->
+    <title>알파몰 리디자인</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header_top">
+            <ul>
+                <li><a
+                        href="https://www.alpha.co.kr/member/login/login.do?retUrl=https%3A%2F%2Fwww.alpha.co.kr%2Findex.do">로그인</a>
+                </li>
+                <li><a href="https://www.alpha.co.kr/member/join/joinStep1.do">회원가입</a></li>
+                <li><a
+                        href="https://www.alpha.co.kr/order/cart/cartProduct.do?IS_MEMBER=false&searchPickupYn=N">장바구니</a>
+                </li>
+                <li><a href="https://www.alpha.co.kr/member/join/joinStep1.do">마이페이지</a></li>
+                <li><a href="https://www.alpha.co.kr/customer/customerMain/customerMain.do">고객센터</a></li>
+            </ul>
+        </div> <!-- .header_top end -->
+        <div class="header_top_tab">
+            <ul>
+                <li><img src="img/icon_customer.png" alt="마이페이지">
+                    <img src="img/icon_cart.png" alt="장바구니">
+                </li>
+                <li>
+                    <h1 class="logo">
+                        <p>Alpha mall</p>
+                    </h1><!-- .logo end -->
+                </li>
+                <li><img src="img/돋보기.svg" alt="검색창">
+                    <button><img src="img/icon_menu.png" alt="메뉴 불러오기"></button>
+                </li>
+                <li>
+                    <nav class="nav">
+                        <ul class="gnb">
+                            <li>
+                                <a href="#" class="depth-1">OFFICE</a>
+                                <ul class="depth-2">
+                                    <li><a href="#">문구사무</a></li>
+                                    <li><a href="#">디자인문구</a></li>
+                                    <li><a href="#">전산디지털/가전</a></li>
+                                </ul><!-- .depth-2 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-1">ART</a>
+                                <ul class="depth-2">
+                                    <li><a href="#">화방/모형/DIY</a></li>
+                                    <li><a href="#">학용/학습/교구</a></li>
+                                    <li><a href="#">캐릭터용품/완구</a></li>
+                                    <li><a href="#">명품브랜드(펜)</a></li>
+                                </ul><!-- .depth-2 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-1">생활</a>
+                                <ul class="depth-2">
+                                    <li><a href="#">식품·편의</a></li>
+                                    <li><a href="#">생활/수납/위생</a></li>
+                                    <li><a href="#">반려동물</a></li>
+                                    <li><a href="#">패션/뷰티</a></li>
+                                    <li><a href="#">주방/욕실/청소</a></li>
+                                    <li><a href="#">스포츠/레저/취미</a></li>
+                                    <li><a href="#1">공구/안전/산업</a></li>
+                                    <li><a href="#">가구/인테리어</a></li>
+                                    <li><a href="#">패션잡화/소품</a></li>
+                                    <li><a href="#">디자인리빙</a></li>
+                                </ul><!-- .depth-2 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-1">브랜드</a>
+                                <ul class="depth-2">
+                                    <li><a href="#">LG임직원
+                                            폐쇄몰</a></li>
+                                    <li><a href="#">LG전자
+                                            브랜드관</a></li>
+                                    <li><a href="#">삼성전자 브랜드관</a></li>
+                                    <li><a href="#">e쿠폰/도서</a>
+                                    </li>
+                                    <li><a href="#">꽃배달</a></li>
+                                </ul><!-- .depth-2 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-1">이벤트</a>
+                                <ul class="depth-2">
+                                    <li><a href="#">진행중인 이벤트</a></li>
+                                    <li><a href="#">지난 이벤트</a></li>
+                                    <li><a href="#">당첨자발표</a></li>
+                                </ul><!-- .depth-2 end -->
+                            </li>
+                            <li>
+                                <a href="#" class="depth-1">기획전</a>
+                                <ul class="depth-2">
+                                    <li><a href="#">마패드</a></li>
+                                    <li><a href="#">엡손</a></li>
+                                    <li><a href="#">킹짐</a></li>
+                                </ul><!-- .depth-2 end -->
+                            </li>
+                        </ul><!-- .gnb end -->
+                    </nav> <!-- .nav end --> <!-- 메뉴 옆에서 나타나기+아코디언스타일2 -->
+                </li>
+            </ul>
+        </div><!-- .header_top_tab end-->
+
+        <div class="header_mid">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="알파몰 로고" />
+                    <p>Alpha mall</p>
+                </a>
+            </h1><!-- .logo end -->
+
+            <label class="search" for="search_txt">
+                <form action="" class="search" method="get">
+                    <input type="text" class="search_txt">
+                    <button class="search_btn" type="submit">
+                        <img src="img/돋보기.svg" alt="">
+                    </button>
+                </form>
+            </label>
+
+            <dia class="header_btn">
+                <p><a href="https://www.alpha.co.kr/indexMungudoMae.do">문구도매</a></p>
+                <p><a href="http://www.alpha114.co.kr/ko/pc/chain/qnaList.do">가맹문의</a></p>
+            </dia><!-- .header_btn end -->
+
+        </div> <!-- .header_mid end -->
+
+
+        <nav class="nav">
+            <ul class="gnb">
+                <li>
+                    <a href="#" class="depth-1">OFFICE</a>
+                    <ul class="depth-2">
+                        <li><a href="#">문구사무</a></li>
+                        <li><a href="#">디자인문구</a></li>
+                        <li><a href="#">전산디지털/가전</a></li>
+                    </ul><!-- .depth-2 end -->
+                </li>
+                <li>
+                    <a href="#" class="depth-1">ART</a>
+                    <ul class="depth-2">
+                        <li><a href="#">화방/모형/DIY</a></li>
+                        <li><a href="#">학용/학습/교구</a></li>
+                        <li><a href="#">캐릭터용품/완구</a></li>
+                        <li><a href="#">명품브랜드(펜)</a></li>
+                    </ul><!-- .depth-2 end -->
+                </li>
+                <li>
+                    <a href="#" class="depth-1">생활</a>
+                    <ul class="depth-2">
+                        <li><a href="#">식품·편의</a></li>
+                        <li><a href="#">생활/수납/위생</a></li>
+                        <li><a href="#">반려동물</a></li>
+                        <li><a href="#">패션/뷰티</a></li>
+                        <li><a href="#">주방/욕실/청소</a></li>
+                        <li><a href="#">스포츠/레저/취미</a></li>
+                        <li><a href="#1">공구/안전/산업</a></li>
+                        <li><a href="#">가구/인테리어</a></li>
+                        <li><a href="#">패션잡화/소품</a></li>
+                        <li><a href="#">디자인리빙</a></li>
+                    </ul><!-- .depth-2 end -->
+                </li>
+                <li>
+                    <a href="#" class="depth-1">브랜드</a>
+                    <ul class="depth-2">
+                        <li><a href="#">LG임직원
+                                폐쇄몰</a></li>
+                        <li><a href="#">LG전자
+                                브랜드관</a></li>
+                        <li><a href="#">삼성전자 브랜드관</a></li>
+                        <li><a href="#">e쿠폰/도서</a>
+                        </li>
+                        <li><a href="#">꽃배달</a></li>
+                    </ul><!-- .depth-2 end -->
+                </li>
+                <li>
+                    <a href="#" class="depth-1">이벤트</a>
+                    <ul class="depth-2">
+                        <li><a href="#">진행중인 이벤트</a></li>
+                        <li><a href="#">지난 이벤트</a></li>
+                        <li><a href="#">당첨자발표</a></li>
+                    </ul><!-- .depth-2 end -->
+                </li>
+                <li>
+                    <a href="#" class="depth-1">기획전</a>
+                    <ul class="depth-2">
+                        <li><a href="#">마패드</a></li>
+                        <li><a href="#">엡손</a></li>
+                        <li><a href="#">킹짐</a></li>
+                    </ul><!-- .depth-2 end -->
+                </li>
+            </ul><!-- .gnb end -->
+        </nav> <!-- .nav end -->
+
+    </header> <!-- .header end -->
+
+    <main class="main">
+
+        <section class="visual">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/main_visual.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/main_visual_diary.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/main_visual_AA4.jpg" alt="">
+                    </div>
+                </div>
+                <!-- .swiper-wrapper end -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div><!-- .swiper mySwiper end -->
+        </section><!-- .visual end -->
+
+        <div id="section">
+            <section class="section01">
+                <div class="title">
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="titile_wrap">
+                            <h2>New Products</h2>
+                            <p>알파몰의 새로운 상품</p>
+                        </div><!-- .title_wrap end -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="all">
+                            <p>전체보기</p>
+                            <img src="img/icon_arrowright_thin.svg" alt="">
+                        </div><!-- .all end -->
+                    </a>
+                </div><!-- .title end -->
+                <div class="item_wrap">
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=2070030&PS_IDX=2225">
+                        <div class="item">
+                            <img src="img/1-1.png" alt="">
+                            <div class="item_text">
+                                <p><span>[알파]</span> 친환경 BamBoo 독서대 102B (330*230mm) + 형광펜 파워라인세트 (3색)증정</p>
+                                <p>7,200원</p>
+                                <strong>6,400원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=2084367&PS_IDX=2225">
+                        <div class="item">
+                            <img src="img/1-2.png" alt="">
+                            <div class="item_text">
+                                <p><span>[알파]</span> 이지 더블클립N 특대(1갑=12입)</p>
+                                <p>6,200원</p>
+                                <strong>5,500원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=1981062&PS_IDX=2225">
+                        <div class="item">
+                            <img src="img/1-3.png" alt="">
+                            <div class="item_text">
+                                <p><span>[아트메이트]</span> 마카/트윈마카 108색</p>
+                                <p>60,000원</p>
+                                <strong>45,000원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=2011506&PS_IDX=1995">
+                        <div class="item">
+                            <img src="img/1-4.png" alt="">
+                            <div class="item_text">
+                                <p><span>[엡손]</span> 라벨프린터 LW-K740WH + 알파 사무용품 증정 Ver.2</p>
+                                <p>200,000원</p>
+                                <strong>191,500원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=1982521&PS_IDX=2225">
+                        <div class="item">
+                            <img src="img/1-5.jpg" alt="">
+                            <div class="item_text">
+                                <p><span>[스마텍]</span> 보조배터리/STPB-MB5000 5000mAh/화이트/C타입</p>
+                                <p>15,000원</p>
+                                <strong>14,000원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=2083973&PS_IDX=2225">
+                        <div class="item">
+                            <img src="img/1-6.jpg" alt="">
+                            <div class="item_text">
+                                <p><span>[알파]</span> 프리미엄 안전캡 멀티탭 개별스위치 3구 3M</p>
+                                <p>27,200원</p>
+                                <strong>24,000원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=2030625&PS_IDX=1185">
+                        <div class="item">
+                            <img src="img/1-7.jpg" alt="">
+                            <div class="item_text">
+                                <p>[킹짐] 손잡이 바인더/A4/2공/13cm</p>
+                                <p>27,000원</p>
+                                <strong>26,000원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/product/productView.do?productCode=1994774&PS_IDX=2225">
+                        <div class="item">
+                            <img src="img/1-8.jpg" alt="">
+                            <div class="item_text">
+                                <p>[알파] 프라이버시 필터/560*360mm/24인치</p>
+                                <p>110,000원</p>
+                                <strong>105,000원</strong>
+                                <p>당일출고</p>
+                            </div><!-- item_text end -->
+                        </div><!-- .item -->
+                    </a>
+                </div><!-- .item_wrap end -->
+            </section><!-- .section01 end -->
+
+            <section class="section02">
+                <div class="title">
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="titile_wrap">
+                            <h2>MD’s Pick</h2>
+                            <p>알파몰 MD가 추천하는 상품</p>
+                        </div><!-- .title_wrap end -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="all">
+                            <p>전체보기</p>
+                            <img src="img/icon_arrowright_thin.svg" alt="">
+                        </div><!-- .all end -->
+                    </a>
+                </div><!-- .title end -->
+
+                <div class="item_wrap_md">
+                    <div class="item_post01">
+                        <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2725">
+                            <img src="img/md'spickmain.jpg" alt="">
+                        </a>
+
+                        <div class="flex_contents_tab">
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1933327&PS_IDX=2725">
+                                <div class="item">
+                                    <img src="img/2-1.jpg" alt="">
+
+                                    <div class="item_text">
+                                        <p> <span>[명장불난로]</span> <br />
+                                            곰병장 특대형 손난로 핫팩 (5ea) </p>
+                                        <strong>5,000원</strong>
+                                    </div><!-- .item_text end -->
+                                </div><!-- .itme -->    
+                            </a>
+
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=2010910&PS_IDX=2725">
+                                <div class="item">
+                                    <img src="img/2-2.jpg" alt="">
+                                    <div class="item_text">
+                                        <p><span>[HICKIES]</span><br />
+                                            홈 사무실 층간소음방지 귀여운 보온 털슬리퍼 LaLa</p>
+                                        <strong>7,600원</strong>
+                                    </div>
+                                </div><!-- .itme -->
+                            </a>
+                        </div><!-- .flex_contents_tab end -->
+                    </div><!-- .item_post01 end -->
+
+                    <div class="contents_wrap">
+                        <a href="https://www.alpha.co.kr/product/productView.do?productCode=1933327&PS_IDX=2725">
+                            <div class="item">
+                                <img src="img/2-1.jpg" alt="">
+
+                                <div class="item_text">
+                                    <p> <span>[명장불난로]</span> <br />
+                                        곰병장 특대형 손난로 핫팩 (5ea) </p>
+                                    <strong>5,000원</strong>
+                                </div><!-- .item_text end -->
+                            </div><!-- .itme -->
+                            
+                        </a>
+                        <a href="https://www.alpha.co.kr/product/productView.do?productCode=2010910&PS_IDX=2725">
+                            <div class="item">
+                                <img src="img/2-2.jpg" alt="">
+                                <div class="item_text">
+                                    <p><span>[HICKIES]</span><br />
+                                        홈 사무실 층간소음방지 귀여운 보온 털슬리퍼 LaLa</p>
+                                    <strong>7,600원</strong>
+                                </div>
+                            </div><!-- .itme -->
+                        </a>
+                        <a
+                            href="https://www.alpha.co.kr/product/productView.do?double_submit=88F84BF7-0271-4069-BF50-31073F177D46&searchDirectType=&siteName=&preKwd=&reSrchFlag=&notFlat=&preQuery=%28text_idx+%3D+%27%EC%BD%94%EC%A7%80+%ED%83%84%EC%86%8C%EB%A7%A4%ED%8A%B8+%EC%8B%B1%EA%B8%80+HL-2000+%EB%8D%94%EB%B8%94+HL-3000%27+allwordsyn+or+str_idx+%3D+%27%EC%BD%94%EC%A7%80+%ED%83%84%EC%86%8C%EB%A7%A4%ED%8A%B8+%EC%8B%B1%EA%B8%80+HL-2000+%EB%8D%94%EB%B8%94+HL-3000%27%29&category=&cPage=&totalSearchText=%EC%BD%94%EC%A7%80+%ED%83%84%EC%86%8C%EB%A7%A4%ED%8A%B8+%EC%8B%B1%EA%B8%80+HL-2000+%EB%8D%94%EB%B8%94+HL-3000&productCode=2134341&PS_IDX=&AREA_VALUE=SEARCH&M_ADULT_YN=N&pageSize=&ORDER_COL=MD&viewType=&reSearchText=&totalSearchCcode=">
+                            <div class="item">
+                                <img src="img/2-3.jpg" alt="">
+                                <div class="item_text">
+                                    <p><span>[슈맥스]</span><br />
+                                        2025년형 국산 슈맥스 코지 탄소매트 싱글 HL-2000 더블 HL-3000</p>
+                                    <strong>89,000원</strong>
+                                </div>
+                            </div><!-- .itme -->
+                        </a>
+                        <a href="https://www.alpha.co.kr/product/productView.do?productCode=2010910&PS_IDX=2725">
+                            <div class="item">
+                                <img src="img/2-4.jpg" alt="">
+                                <div class="item_text">
+                                    <p><span>[스벤]</span><br />
+                                        발터치 2단 석영관 전기히터 SVH-F603H</p>
+                                    <strong>49,800원</strong>
+                                </div>
+                            </div><!-- .itme -->
+                        </a>
+                        <a href="https://www.alpha.co.kr/product/productView.do?productCode=2031430&PS_IDX=2725">
+                            <div class="item">
+                                <img src="img/2-5.jpg" alt="">
+                                <div class="item_text">
+                                    <p><span>[에스모도]</span><br />
+                                        285 양면 손난로 보조배터리 5,000mhA 파우치포함</p>
+                                    <strong>23,500원</strong>
+                                </div>
+                            </div><!-- .itme -->
+                        </a>
+                        <a href="https://www.alpha.co.kr/product/productView.do?productCode=2091025&PS_IDX=2725">
+                            <div class="item">
+                                <img src="img/2-6.jpg" alt="">
+                                <div class="item_text">
+                                    <p><span>[오아]</span><br />
+                                        안개가습기1000ml</p>
+                                    <strong>35,920원</strong>
+                                </div>
+                            </div><!-- .itme -->
+                        </a>
+                        <a href="https://www.alpha.co.kr/product/productView.do?productCode=2133075&PS_IDX=2725">
+                            <div class="item">
+
+                                <img src="img/2-7.jpg" alt="">
+                                <div class="item_text">
+                                    <p><span>[버팔로]</span><br />
+                                        올타임 사계절 차렵이불 베개피 1개 포함 그린색상</p>
+                                    <strong>79,000원</strong>
+                                </div>
+                            </div><!-- .itme -->
+                        </a>
+                        <a href="https://www.alpha.co.kr/product/productView.do?productCode=1080617&PS_IDX=2725">
+                            <div class="item">
+                                <img src="img/2-8.jpg" alt="">
+                                <div class="item_text">
+                                    <p><span>[3M]</span><br />
+                                        문풍지 실내용 2285 (9.5*13mm*4.15M)</p>
+                                    <strong>5,000원</strong>
+                                </div>
+                            </div><!-- .itme -->
+                        </a>
+                    </div><!-- .contents_wrap -->
+                    
+                    <div class="swiper grid_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?productCode=1933327&PS_IDX=2725">
+                                    <div class="item">
+                                        <img src="img/2-1.jpg" alt="">
+                                        <div class="item_text">
+                                            <p> <span>[명장불난로]</span> <br />
+                                                곰병장 특대형 손난로 핫팩 (5ea) </p>
+                                            <strong>5,000원</strong>
+                                        </div><!-- .item_text end -->
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?productCode=2010910&PS_IDX=2725">
+                                    <div class="item">
+                                        <img src="img/2-2.jpg" alt="">
+                                        <div class="item_text">
+                                            <p><span>[HICKIES]</span><br />
+                                                홈 사무실 층간소음방지 귀여운 보온 털슬리퍼 LaLa</p>
+                                            <strong>7,600원</strong>
+                                        </div>
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?double_submit=88F84BF7-0271-4069-BF50-31073F177D46&searchDirectType=&siteName=&preKwd=&reSrchFlag=&notFlat=&preQuery=%28text_idx+%3D+%27%EC%BD%94%EC%A7%80+%ED%83%84%EC%86%8C%EB%A7%A4%ED%8A%B8+%EC%8B%B1%EA%B8%80+HL-2000+%EB%8D%94%EB%B8%94+HL-3000%27+allwordsyn+or+str_idx+%3D+%27%EC%BD%94%EC%A7%80+%ED%83%84%EC%86%8C%EB%A7%A4%ED%8A%B8+%EC%8B%B1%EA%B8%80+HL-2000+%EB%8D%94%EB%B8%94+HL-3000%27%29&category=&cPage=&totalSearchText=%EC%BD%94%EC%A7%80+%ED%83%84%EC%86%8C%EB%A7%A4%ED%8A%B8+%EC%8B%B1%EA%B8%80+HL-2000+%EB%8D%94%EB%B8%94+HL-3000&productCode=2134341&PS_IDX=&AREA_VALUE=SEARCH&M_ADULT_YN=N&pageSize=&ORDER_COL=MD&viewType=&reSearchText=&totalSearchCcode=">
+                                    <div class="item">
+                                        <img src="img/2-3.jpg" alt="">
+                                        <div class="item_text">
+                                            <p><span>[슈맥스]</span><br />
+                                                2025년형 국산 슈맥스 코지 탄소매트 싱글 HL-2000 더블 HL-3000</p>
+                                            <strong>89,000원</strong>
+                                        </div>
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?productCode=2010910&PS_IDX=2725">
+                                    <div class="item">
+                                        <img src="img/2-4.jpg" alt="">
+                                        <div class="item_text">
+                                            <p>[스벤]<br />
+                                                발터치 2단 석영관 전기히터 SVH-F603H</p>
+                                            <strong>49,800원</strong>
+                                        </div>
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?productCode=2031430&PS_IDX=2725">
+                                    <div class="item">
+                                        <img src="img/2-5.jpg" alt="">
+                                        <div class="item_text">
+                                            <p>[에스모도]<br />
+                                                285 양면 손난로 보조배터리 5,000mhA 파우치포함</p>
+                                            <strong>23,500원</strong>
+                                        </div>
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?productCode=2091025&PS_IDX=2725">
+                                    <div class="item">
+                                        <img src="img/2-6.jpg" alt="">
+                                        <div class="item_text">
+                                            <p>[오아]<br />
+                                                안개가습기1000ml</p>
+                                            <strong>35,920원</strong>
+                                        </div>
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?productCode=2133075&PS_IDX=2725">
+                                    <div class="item">
+
+                                        <img src="img/2-7.jpg" alt="">
+                                        <div class="item_text">
+                                            <p>[버팔로]<br />
+                                                올타임 사계절 차렵이불 베개피 1개 포함 그린색상</p>
+                                            <strong>79,000원</strong>
+                                        </div>
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a
+                                    href="https://www.alpha.co.kr/product/productView.do?productCode=1080617&PS_IDX=2725">
+                                    <div class="item">
+                                        <img src="img/2-8.jpg" alt="">
+                                        <div class="item_text">
+                                            <p>[3M]<br />
+                                                문풍지 실내용 2285 (9.5*13mm*4.15M)</p>
+                                            <strong>5,000원</strong>
+                                        </div>
+                                    </div><!-- .itme -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next grid_swiper"></div>
+                        <div class="swiper-button-prev grid_swiper"></div>
+                        <div class="swiper-pagination grid_swiper"></div>
+                    </div><!-- .swiper grid_swiper end -->
+                </div><!-- .item_wrap_md end -->
+            </section><!-- .section02 end -->
+
+            <section class="section03">
+                <div class="title">
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="titile_wrap">
+                            <h2>Best Products</h2>
+                            <p>소비자들이 가장 많이 찾는 카테고리별 베스트 상품</p>
+                        </div><!-- .title_wrap end -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="all">
+                            <p>전체보기</p>
+                            <img src="img/icon_arrowright_thin.svg" alt="">
+                        </div><!-- .all end -->
+                    </a>
+                </div><!-- .title end -->
+
+                <ul class="tabs">
+                    <li class="tab_item active">사무용품</li>
+                    <li class="tab_item">미술재료</li>
+                    <li class="tab_item">캐릭터용품·완구</li>
+                    <li class="tab_item">전산 디지털</li>
+                    <li class="tab_item">공구·안전</li>
+                    <li class="tab_item">전자브랜드관</li>
+                </ul><!-- .tabs end -->
+                <div class="tab_content active">
+                    <div class="item_bp">
+                        <img src="img/3-1.jpg" alt="">
+                        <a
+                            href="https://www.alpha.co.kr/product/productView.do?cPage=&productCode=1288413&M_ADULT_YN=N&pageSize=20&ORDER_COL=md&viewType=&searchBrand=&searchDirectType=&categoryCode=001001005001001">
+                            <div class="txt">
+                                <p><span>[유니]</span><br />
+                                    볼샤 제트스트림 4+1 MSXE5-100</p>
+                                <strong>12,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-2.jpg" alt="">
+                        <a
+                            href="https://www.alpha.co.kr/product/productView.do?cPage=&productCode=382026&M_ADULT_YN=N&pageSize=20&ORDER_COL=md&viewType=&searchBrand=&searchDirectType=&categoryCode=001001001001001">
+                            <div class="txt">
+                                <p><span>[알파]</span><br />
+                                    수정테이프 ACT-1158 (5mm*8M)</p>
+                                <strong>6,800<span>원</span></strong>
+                                <ul>
+                                    <li>자체제작</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-3.jpg" alt="">
+                        <a
+                            href="https://www.alpha.co.kr/product/productView.do?cPage=&productCode=137899&M_ADULT_YN=N&pageSize=20&ORDER_COL=md&viewType=&searchBrand=&searchDirectType=&categoryCode=001001001015003">
+                            <div class="txt">
+                                <p><span>[우드클럽]</span><br />
+                                    고급원목 휴대용 명함케이스 1327W</p>
+                                <strong>29,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-4.jpg" alt="">
+                        <a
+                            href="https://www.alpha.co.kr/product/productView.do?cPage=&productCode=1241082&M_ADULT_YN=N&pageSize=20&ORDER_COL=md&viewType=&searchBrand=&searchDirectType=&categoryCode=001001002002001">
+                            <div class="txt">
+                                <p><span>[엡손]</span><br />
+                                    라벨프린터 LW-K200PK (4~18mm)…</p>
+                                <strong>69,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-5.jpg" alt="">
+                        <a
+                            href="https://www.alpha.co.kr/product/productView.do?cPage=&productCode=102016&M_ADULT_YN=N&pageSize=20&ORDER_COL=md&viewType=&searchBrand=&searchDirectType=&categoryCode=001001003001001">
+                            <div class="txt">
+                                <p><span>[더블에이]</span><br />
+                                    복사지 A4 80g 1BOX (2,500매)</p>
+                                <strong>35,000<span>원</span></strong>
+                                <ul>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-6.jpg" alt="">
+                        <a
+                            href="https://www.alpha.co.kr/product/productView.do?cPage=&productCode=101892&M_ADULT_YN=N&pageSize=20&ORDER_COL=md&viewType=&searchBrand=&searchDirectType=&categoryCode=001001006001001">
+                            <div class="txt">
+                                <p><span>[시스맥스]</span><br />
+                                    서류함 LUX오픈형4단 13105(그레이)</p>
+                                <strong>29,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                </div><!-- .tab_content  end -->
+
+                <div class="tab_content">
+                    <div class="item_bp">
+                        <img src="img/3-2-1.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[신한]</span><br />
+                                    SWC 수채화물감세트 15ml*32색</p>
+                                <strong>103,700<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>월간특가</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-2-2.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[윈저앤뉴튼]</span><br />
+                                    그리핀 알키드 유화물감 37ml 패스트 드라잉 오일컬러 낱색(색상선택)</p>
+                                <strong>8,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-2-3.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[시넬리에]</span><br />
+                                    전문가 유화물감세트 22색 WoodenBOX</p>
+                                <strong>581,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>무료배송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-2-4.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[모나미]</span><br />
+                                    싸인펜 슈퍼 (12색) (1타/12입)</p>
+                                <strong>38,400<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-2-5.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[쉴드]</span><br />
+                                    그리다.페이스.페인팅 (나이트팩)</p>
+                                <strong>25,600<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-2-6.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[지구]</span><br />
+                                    싸인펜 노마르지 (12색) (1타/12입)</p>
+                                <strong>48,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                </div><!-- .tab_content  end -->
+
+                <div class="tab_content">
+                    <div class="item_bp">
+                        <img src="img/3-3-1.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[오로라월드]</span><br />
+                                    산리오/키링메이커&쉐이커레진아트</p>
+                                <strong>44,500<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-3-2.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[영실업]</span><br />
+                                    쥬쥬의시크릿 프렌즈폰 /YT206278</p>
+                                <strong>76,800<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-3-3.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[투키토이]</span><br />
+                                    롤러코스터포레스트(706)</p>
+                                <strong>48,000<span>원</span></strong>
+                                <ul>
+                                    <li>무료배송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-3-4.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[리틀호안미로]</span><br />
+                                    스타샌드툴키트(05106)</p>
+                                <strong>22,000<span>원</span></strong>
+                                <ul>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-3-5.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[캐스B]</span><br />
+                                    튼튼 초코에듀볼옮기기</p>
+                                <strong>20,000<span>원</span></strong>
+                                <ul>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-3-6.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[투키토이]</span><br />
+                                    블럭플레이33pcs</p>
+                                <strong>27,000<span>원</span></strong>
+                                <ul>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                </div><!-- .tab_content  end -->
+
+                <div class="tab_content">
+                    <div class="item_bp">
+                        <img src="img/3-4-1.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[알파]</span><br />
+                                    와이드 데스크패드 AWDP-100 (780*300mm)</p>
+                                <strong>9,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>자체제작</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-4-2.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[알파]</span><br />
+                                    먼지제거제 AD-201 (225g/가연성/무염소)</p>
+                                <strong>4,600<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>자체제작</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-4-3.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[알파]</span><br />
+                                    프라이버시 필터/560*360mm/24인치</p>
+                                <strong>105,000<span>원</span></strong>
+                                <ul>
+                                    <li>무료배송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-4-4.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[썬앤원]</span><br />
+                                    유보드 스마트 블랙 모니터 받침대</p>
+                                <strong>32,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-4-5.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[단순생활X프린텍]</span><br />
+                                    미니 라벨프린터</p>
+                                <strong>39,900<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-4-6.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[로지텍]</span><br />
+                                    M100R 블랙 옵티컬 마우스 [USB]</p>
+                                <strong>13,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                </div><!-- .tab_content  end -->
+
+                <div class="tab_content">
+                    <div class="item_bp">
+                        <img src="img/3-5-1.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[알파]</span><br />
+                                    롱 노우즈 135</p>
+                                <strong>5,500<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>자체제작</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-5-2.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[BOSCH]</span><br />
+                                    먼지제거제 AD-201 (225g/가연성/무염소)</p>
+                                <strong>288,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>무료배송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-5-3.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[알파]</span><br />
+                                    나일론 코팅줄자 ATL-S002 (단면/25mm*7.5M)</p>
+                                <strong>12,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-5-4.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[브레인]</span><br />
+                                    화구박스 약상자 다용도보관함 CA928</p>
+                                <strong>19,400<span>원</span></strong>
+                                <ul>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-5-5.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[보쉬]</span><br />
+                                    가스인두기 (330*180*50mm)</p>
+                                <strong>90,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>당일발송</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-5-6.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[그리다]</span><br />
+                                    니트릴장갑 다용도 (M/100매/블루/화이트)</p>
+                                <strong>20,000<span>원</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                </div><!-- .tab_content  end -->
+
+                <div class="tab_content">
+                    <div class="item_bp">
+                        <img src="img/3-6-1.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[삼성전자]</span><br />
+                                    삼성 갤럭시 탭 A9+ 그라파이트 64GB SM-X210NZAAKOO</p>
+                                <strong>일반회원전용 가격<span>(로그인)</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>회원전용</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-6-2.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[삼성전자]</span><br />
+                                    갤럭시 워치7 40mm 그린 SM-L300NZGAKOO</p>
+                                <strong>일반회원전용 가격<span>(로그인)</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>회원전용</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-6-3.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[삼성전자]</span><br />
+                                    스마트모니터 M5 32인치(80.1cm)+이동형 스탠드 LS32DM503EK-ST</p>
+                                <strong>일반회원전용 가격<span>(로그인)</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>회원전용</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-6-4.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[다이슨]</span><br />
+                                    DYSON SV46 V12 오리진 컴플리트 니켈/퍼플</p>
+                                <strong>B2B회원전용<span>(로그인)</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>회원전용</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-6-5.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[다이슨]</span><br />
+                                    DYSON 쿨 공기청정기 TP07 (화이트/실버)</p>
+                                <strong>B2B회원전용<span>(로그인)</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>회원전용</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                    <div class="item_bp">
+                        <img src="img/3-6-6.jpg" alt="">
+                        <a href="#">
+                            <div class="txt">
+                                <p><span>[다이슨]</span><br />
+                                    DYSON 솔라사이클 모프 조명 플로어스탠드형 CF06 (화이트/실버)</p>
+                                <strong>B2B회원전용<span>(로그인)</span></strong>
+                                <ul>
+                                    <li>SALE</li>
+                                    <li>회원전용</li>
+                                    <li>HOT</li>
+                                </ul>
+                            </div><!-- .txt end -->
+                        </a>
+                        <div class="btns">
+                            <img src="img/icon_heart.png" alt="">
+                            <img src="img/icon_bag.png" alt="">
+                            <a href="#"><img src="img/icon_heart_hover.png" alt=""></a>
+                            <a href="#"><img src="img/icon_bag_hover.png" alt=""></a>
+                        </div><!-- .btns end -->
+                    </div><!-- .item_bp end -->
+                </div><!-- .tab_content  end -->
+
+            </section><!-- .section03 end -->
+
+            <section class="section04">
+                <div class="title">
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="titile_wrap">
+                            <h2>Event</h2>
+                            <p>현재 진행중인 이벤트</p>
+                        </div><!-- .title_wrap end -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="all">
+                            <p>전체보기</p>
+                            <img src="img/icon_arrowright_thin.svg" alt="">
+                        </div><!-- .all end -->
+                    </a>
+                </div><!-- .title end -->
+
+                <div class="event_wrap">
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2660">
+                        <div class="event01">
+                            <img src="img/4-1.png" alt="">
+                            <div class="event_text">
+                                <p>2025 수능대박 기원</p>
+                                <h3>필기류 <span>20%</span>할인쿠폰 다운로드</h3>
+                            </div><!-- .event_text end -->
+                        </div>
+                    </a>
+                    <div class="event_right_wrap">
+                        <div class="event_rightup">
+                            <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2691">
+                                <div class="event02">
+                                    <img src="img/4-2.png" alt="">
+                                    <div class="event_text">
+                                        <p>인생의 한 페이지가 될 수있게</p>
+                                        <h3>2025 다이어리 최대<span>34%</span>할인!</h3>
+                                    </div><!-- .event_text end -->
+                                </div>
+                            </a>
+                            <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2611">
+                                <div class="event03">
+                                    <img src="img/4-3.png" alt="">
+                                    <div class="event_text">
+                                        <p>언제 어디서든 소중한 펜</p>
+                                        <h3>펜 파우치 모음전 바로가기</h3>
+                                    </div><!-- .event_text end -->
+                                </div>
+                            </a>
+                        </div><!-- .event_rightup end -->
+                        <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2704">
+                            <div class="event04">
+                                <img src="img/4-4.png" alt="">
+                                <div class="event_text">
+                                    <p>플레이기어 12종</p>
+                                    <h3>모니터 받침대 초특가 기획전</h3>
+                                </div><!-- .event_text end -->
+                            </div>
+                        </a>
+                    </div><!-- .event_right_wrap -->
+                </div><!-- .event_wrap -->
+            </section><!-- .section04 end -->
+
+            <section class="section05">
+                <div class="title">
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="titile_wrap">
+                            <h2>브랜드 기획전</h2>
+                            <p>현재 진행중인 브랜드 기획전</p>
+                        </div><!-- .title_wrap end -->
+                    </a>
+                    <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=2225">
+                        <div class="all">
+                            <p>전체보기</p>
+                            <img src="img/icon_arrowright_thin.svg" alt="">
+                        </div><!-- .all end -->
+                    </a>
+                </div><!-- .title end -->
+                <div class="wrap05">
+                    <div class="brand_wrap">
+                        <a href="https://www.alpha.co.kr/plan/brandPlanProductForm.do?BS_IDX=130">
+                            <div class="brand">
+                                <img src="img/5-1.png" alt="">
+                                <p>내일의 세계를 상상하다
+                                    <br />프랑스문구<br />
+                                    <b>마패드</b>
+                                </p>
+                            </div><!-- .brand end -->
+                        </a>
+                        <div class="brand_item_wrap">
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1795709">
+                                <div class="b_item">
+
+                                    <img src="img/5-1-1.jpg" alt="">
+
+                                    <div class="item_txt">
+                                        <p><span>Maped</span>
+                                            <br />스쿨 문구세트(8종구성)
+                                        </p>
+                                        <strong>15,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1820996">
+                                <div class="b_item">
+                                    <img src="img/5-1-2.jpg" alt="">
+
+                                    <div class="item_txt">
+                                        <p><span>Maped</span>
+                                            <br />가위 타투 코스믹 469212 (21cm)
+                                        </p>
+                                        <strong>6,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1659523">
+                                <div class="b_item">
+                                    <img src="img/5-1-3.jpg" alt="">
+
+                                    <div class="item_txt">
+                                        <p><span>Maped</span>
+                                            <br />유니버셜 컷터칼092310 9mm
+                                        </p>
+                                        <strong>3,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1821024">
+                                <div class="b_item">
+                                    <img src="img/5-1-4.jpg" alt="">
+
+                                    <div class="item_txt">
+                                        <p><span>Maped</span>
+                                            <br />콤파스 스터디파스텔 194510 (1품/니드식)
+                                        </p>
+                                        <strong>3,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                        </div><!-- .brand_item_wrap end -->
+
+                    </div><!-- .brand_wrap end -->
+                    <div class="brand_wrap">
+                        <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=1995">
+                            <div class="brand">
+                                <img src="img/5-2.png" alt="">
+                                <p>힘내라는 말 대신 이름을 달아주세요
+                                    <br />실속구성 라벨프린터<br />
+                                    <b>엡손</b>
+                                </p>
+                            </div><!-- .brand end -->
+                        </a>
+                        <div class="brand_item_wrap">
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=2011506&PS_IDX=1995">
+                                <div class="b_item">
+                                    <img src="img/5-2-1.jpg" alt="">
+                                    <div class="item_txt">
+                                        <p><span>EPSON</span>
+                                            <br /> 라벨프린터 LW-K740WH + 알파 사무용품 증정
+                                        </p>
+                                        <strong>191,500<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1241082&PS_IDX=1995">
+                                <div class="b_item">
+                                    <img src="img/5-2-2.jpg" alt="">
+
+                                    <div class="item_txt">
+                                        <p><span>EPSON</span>
+                                            <br />라벨프린터 LW-K200PX (4~18mm)
+                                        </p>
+                                        <strong>69,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=977279&PS_IDX=1995">
+                                <div class="b_item">
+                                    <img src="img/5-2-3.jpg" alt="">
+
+                                    <div class="item_txt">
+                                        <p><span>EPSON</span>
+                                            <br />라벨테이프 4mm (길이 9m)
+                                        </p>
+                                        <strong>13,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=519076&PS_IDX=1995">
+                                <div class="b_item">
+                                    <img src="img/5-2-4.jpg" alt="">
+
+                                    <div class="item_txt">
+                                        <p><span>EPSON</span>
+                                            <br /> 라벨프린터 OK-600P (6~24mm)
+                                        </p>
+                                        <strong>220,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                        </div><!-- .brand_item_wrap end -->
+                    </div><!-- .brand_wrap end -->
+                    <div class="brand_wrap">
+                        <a href="https://www.alpha.co.kr/plan/planProductForm.do?PS_IDX=1185">
+                            <div class="brand">
+                                <img src="img/5-3.png" alt="">
+                                <p>세계적인 화일 바인더의 명작 </br>
+                                    <b>KING JIM</b>
+                                </p>
+                            </div><!-- .brand end -->
+                        </a>
+                        <div class="brand_item_wrap">
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=2030627&PS_IDX=1185">
+                                <div class="b_item">
+                                    <img src="img/5-3-1.jpg" alt="">
+                                    <div class="item_txt">
+                                        <p><span>KING JIM</span>
+                                            <br />손잡이 바인더/A4/2곡/15cm
+                                        </p>
+                                        <strong>27,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1822146&PS_IDX=1185">
+                                <div class="b_item">
+                                    <img src="img/5-3-2.jpg" alt="">
+                                    <div class="item_txt">
+                                        <p><span>KING JIM</span>
+                                            <br />클리어화일 플라잉컬러 K1737GSV (A4/8포켓) 5컬러 세트
+                                        </p>
+                                        <strong>3,800<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1440880&PS_IDX=1185">
+                                <div class="b_item">
+                                    <img src="img/5-3-3.jpg" alt="">
+                                    <div class="item_txt">
+                                        <p><span>KING JIM</span>
+                                            <br />자석 클립보드 5085 (A4/120매 수용) 2컬러
+                                        </p>
+                                        <strong>5,500<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                            <a href="https://www.alpha.co.kr/product/productView.do?productCode=1441083&PS_IDX=1185">
+                                <div class="b_item">
+                                    <img src="img/5-3-4.jpg" alt="">
+                                    <div class="item_txt">
+                                        <p><span>KING JIM</span>
+                                            <br />스쿨 문구세트(8종구성)
+                                        </p>
+                                        <strong>15,000<span>원</span></strong>
+                                    </div><!-- .item_txt end -->
+                                </div><!-- .b_item end -->
+                            </a>
+                        </div><!-- .brand_item_wrap end -->
+                    </div><!-- .brand_wrap end -->
+                </div><!-- .wrap05 end -->
+            </section><!-- .section05 end -->
+        </div><!-- #section end -->
+    </main><!-- .main end -->
+
+    <footer class="footer">
+        <div class="footer_top">
+            <ul>
+                <li><a href="http://www.alpha114.co.kr/ko/pc/index.do">회사소개</a></li>
+                <li><a href="https://www.alpha.co.kr/customer/useInfo/accessInfo.do">이용약관</a></li>
+                <li><a href="https://www.alpha.co.kr/customer/useInfo/personInfo.do">개인정보처리방침</a></li>
+                <li><a href="https://www.alpha.co.kr/customer/useInfo/youthProtectionPolicy.do">청소년보호정책</a></li>
+                <li><a href="http://www.alpha114.co.kr/ko/pc/business/business.do">체인점개설문의</a></li>
+                <li><a href="https://www.alpha.co.kr/partner/partnerAsk.do">마케팅제휴/입점문의</a></li>
+                <li><a
+                        href="https://www.alpha.co.kr/customer/serviceInfo/catalogueReq/catalogueReqInfo.do">알파종합카탈로그신청</a>
+                </li>
+                <li><a href="https://www.alpha.co.kr/event/advertisement.do">광고신청</a></li>
+                <li><a href="https://www.alpha.co.kr/scm/manager/login.do">협력사SCM</a></li>
+                <li><a href="https://www.alpha.co.kr/alphaB2BIndex.do">체인점B2B</a></li>
+                <li><a href="https://www.alpha.co.kr/customer/chain/chainSearchList.do">가맹점검색</a></li>
+            </ul>
+        </div><!-- .footer_top end -->
+
+        <div class="footer_text">
+            <div class="f_left">
+                <div class="call">
+                    <img src="img/icon_call.png" alt="">
+                    <div class="sns">
+                        <a href="https://www.instagram.com/alphamungu/"><img src="img/icon_sns_I.png" alt=""></a>
+                        <a href="https://ko-kr.facebook.com/alpha1971"><img src="img/icon_sns_F.png" alt=""></a>
+                    </div><!-- .sns end -->
+                    <div class="call_no">
+                        <p>고객만족센터</p>
+                        <strong>1811-0096</strong>
+                    </div><!-- .call_no end -->
+                </div><!-- .call end -->
+                <div class="time">
+                    <p>평일 : 09:00 ~ 17:00 / 주말, 공휴일 휴무</p>
+                    <p>Fax : 02-718-0194</p>
+                </div><!-- .time end -->
+            </div><!-- .F_left end -->
+
+            <div class="f_right">
+                <div class="sns">
+                    <a href="https://www.instagram.com/alphamungu/"><img src="img/icon_sns_I.png" alt=""></a>
+                    <a href="https://ko-kr.facebook.com/alpha1971"><img src="img/icon_sns_F.png" alt=""></a>
+                </div><!-- .sns end -->
+                <div class="company">
+                    <div>
+                        <p>대표이사 이사 : 이종호</p>
+                        <p>서울 용산구 청파로 56 알파빌딩</p>
+                        <p>사업자등록번호 : 106-81-27494</p>
+                        <p>통신판매업신고 : 용산구청 제02663호</p>
+                    </div>
+                    <div>
+                        <p>결제대금 예치등록번호 02-006-00059</p>
+                        <p>온라인디지털콘텐츠산업발전법에 의한 콘텐츠보호안내</p>
+                        <p>개인정보보호관리책임자 : 장홍석</p>
+                        <p>대표메일 : alpha@alpha.co.kr</p>
+                    </div>
+
+                    <p>고객님의 안전거래를 위해 현금 등으로 모든 거래 결제시 알파에서 가입한 토스페이먼트 매매보호(에스크로) 서비스를 이용하실 수 있습니다.</p>
+
+                </div><!-- .conpany end -->
+            </div><!-- f_right end -->
+        </div><!-- .footer_text end -->
+
+        <div class="typho">
+            <p>고객님의 안전거래를 위해 현금 등으로 모든 거래 결제시 알파에서 가입한 토스페이먼트 매매보호(에스크로) 서비스를 이용하실 수 있습니다.</p>
+            <p>ALPHA MALL</p>
+            <p>COPYRIGHT © ALPHA.CO.KR. INC. ALL RIGHTS </p>
+        </div><!-- .typho end -->
+
+    </footer><!-- footer end -->
+    <div class="fix_bar">
+        <div class="btn_wrap">
+            <ul class="fix_btn">
+                <li><a href="https://www.alpha.co.kr/mypage/estimate/massEstimateList.do">
+                        <img src="img/icon_eye.png" alt="">
+                        <p>오늘 본 상품</p>
+                    </a></li>
+                <li><a href="https://www.alpha.co.kr/mypage/onCoupon/onCouponList.do">
+                        <img src="img/icon_zzim.png" alt="">
+                        <p>찜한 상품</p>
+                    </a></li>
+                <li><a href="https://www.alpha.co.kr/order/cart/cartProduct.do">
+                        <img src="img/icon_bag.png" alt="">
+                        <p>장바구니</p>
+                    </a></li>
+            </ul><!-- .fix_btn -->
+            <div class="top_btn">
+                <a href="#"><img src="img/top_btn.png" alt=""></a>
+            </div><!-- .top_btn -->
+        </div><!-- .btn_wrap end -->
+    </div><!-- .fix_bar end -->
+
+    <div class="fix_bar_mob">
+        <div class="btn_wrap">
+            <ul class="fix_btn">
+                <li><img src="img/icon_Truck.png" alt="주문/배송 목록"></li>
+                <li><img src="img/icon_typhing.png" alt="상담채팅"></li>
+                <li><img src="img/icon_home.png" alt="메인페이지로 가기"></li>
+                <li><img src="img/icon_zzim.png" alt="찜한 상품"></li>
+                <li><img src="img/icon_bag.png" alt="장바구니"></li>
+            </ul><!-- .fix_btn -->
+            <div class="top_btn">
+                <a href="#"><img src="img/top_btn.png" alt=""></a>
+            </div><!-- .top_btn -->
+        </div><!-- .btn_wrap end -->
+    </div><!-- .fix_bar_mob end -->
+
+</body>
+
+</html>
