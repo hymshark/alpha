@@ -1182,7 +1182,7 @@ display: block;
     .footer .typho p:nth-child(2) {font-size: 9.5rem;}
 }
 /* 1280px (태블릿 가로) */
-@media (hover: :hover) and (pointer: fine ){
+@media (hover:hover) and (pointer: fine ){
     .main .section02 .item_wrap_md .swiper.grid_swiper .swiper-wrapper .swiper-slide .item:hover .item_text {
         display: flex;
         flex-direction: column;
