@@ -1243,7 +1243,7 @@ display: block;
     }
     
 }
-@media screen and (max-width:1280px){
+@media screen and (max-width:1280px) and (hover:hover) and (pointer: fine ) {
     /* header */
     .header .header_top {display: none;}
     .header .header_mid {display: none;}
@@ -1303,6 +1303,67 @@ display: block;
     .main .section02 .item_wrap_md .contents_wrap >a .item .item_text p span {font-size: 14px; color: #9e9e9e;}
     .main .section02 .item_wrap_md .contents_wrap >a .item .item_text strong {font-size: 15px; display: block; color: #EE7200;}
 
+    /* hover */
+    
+    .main .section02 .item_wrap_md .swiper.grid_swiper .swiper-wrapper .swiper-slide .item:hover .item_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-color: hsla(0, 0%, 0%, 0.5);
+    }
+    .main .section02 .item_wrap_md .swiper.grid_swiper .swiper-wrapper .swiper-slide .item:hover .item_text p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        word-break: keep-all;
+        margin: 0 10px;
+    }
+    .main .section02 .item_wrap_md .swiper.grid_swiper .swiper-wrapper .swiper-slide .item:hover .item_text strong {
+        color: #FF7200;
+        margin-top: 21px;
+    }
+    
+    
+    .main .section02 .item_wrap_md .contents_wrap .item:hover .item_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-color: hsla(0, 0%, 0%, 0.5);
+    }
+    .main .section02 .item_wrap_md .contents_wrap .item:hover .item_text p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        word-break: keep-all;
+        margin: 0 10px;
+    }
+    .main .section02 .item_wrap_md .contents_wrap .item:hover .item_text strong {
+        color: #FF7200;
+        margin-top: 21px;
+    }
+    
 
 
     
