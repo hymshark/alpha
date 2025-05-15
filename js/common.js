@@ -42,7 +42,7 @@ $(function () {
 
     });//click end
     //MD's pick 그리드 스와이퍼
-    var swiper = new Swiper(".grid_swiper", {
+    var gridSwiper = new Swiper(".grid_swiper", {
         slidesPerView: 3,
         grid: {
             rows: 2,
